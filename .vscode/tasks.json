@@ -1,0 +1,19 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558 
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "che",
+            "command": "dotnet build -c $CONFIGURATION $STARTUP_PROJECT /p:UseSharedCompilation=false",
+            "workdir": "${PROJECT_SOURCE}/ContosoUniversity",
+            "component": "dotnet",
+            "problemMatcher": [],
+            "label": "che: build",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
