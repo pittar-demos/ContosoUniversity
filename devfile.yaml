@@ -39,7 +39,7 @@ commands:
   - id: build
     exec:
       workingDir: ${PROJECT_SOURCE}/ContosoUniversity
-      commandLine: kill $(pidof dotnet); dotnet build -c $CONFIGURATION $STARTUP_PROJECT /p:UseSharedCompilation=false
+      commandLine: dotnet build -c $CONFIGURATION $STARTUP_PROJECT /p:UseSharedCompilation=false
       component: dotnet
       group:
         isDefault: true
